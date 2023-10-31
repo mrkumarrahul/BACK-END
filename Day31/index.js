@@ -21,3 +21,8 @@ app.get('/html',(req,res) => {
     let code="<h1>Fruits</h1><ul><li>Mango</li><li>Orange</li></ul>"
     res.send(code);
 })
+app.get("/:username/:id",(req,res) => {
+    let {username,id}=req.params;
+    console.log(req.params);
+    res.send(`Welcome to the page of ${username} with id ${id}` );
+});
