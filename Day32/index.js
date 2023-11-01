@@ -18,9 +18,10 @@ app.get("/rolldice",(req,res) => {
     res.render("rolldice.ejs",{num:diceVal} )
 })
 app.get("/ig/:username",(req,res) => {
+    const followers=["Rahul","Sanjay","Gautam","Suraj"]
     let {username}=req.params;
-    res.render("instagram.ejs",{username})
-})
+    res.render("instagram.ejs",{username,followers});
+});
 
 app.listen(port,() => {
     console.log(`listening on port: ${port} `);
